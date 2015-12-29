@@ -40,7 +40,7 @@ void cPoint(struct centuria * p, struct centuria * t){
 	
 	double angle = atan2(x, y) * 180 / PI;
 
-	p->angle = -angle;
+	p->angle = angle;
 
 	//if((x > 0) && (y > 0))
 		//p->angle = angle;

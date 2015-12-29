@@ -32,15 +32,19 @@ void cSetPosition(struct centuria * p, int x, int y){
 	p->x = x;
 	p->y = y;
 }
-
-//point unit towards another unit
 void cPoint(struct centuria * p, struct centuria * t){
 	int x = p->x - t->x;
+	//if(x < 0) x *= -1;	
 	int y = p->y - t->y;
+	//if(y < 0) y *= -1;
 	
 	double angle = atan2(x, y) * 180 / PI;
 
 	p->angle = angle;
+
+	//if((x > 0) && (y > 0))
+		//p->angle = angle;
+
 }
 
 //turns object x degrees

@@ -3,6 +3,7 @@
 int framelimit = 60;
 
 int main(){
+	printf("ESC exit - c clear - r reset - p pause \n");
 	
 	if(graphicsInit() != 0){
 		graphicsClose();
@@ -17,7 +18,7 @@ int main(){
 		graphicsDraw();
 
 		Uint32 frametime = SDL_GetTicks() - begintime;		
-		double delay = (1000.f / framelimit) -frametime;		
+		double delay = (1000.f / framelimit) - frametime;		
 		if(delay > 0)
 			SDL_Delay(delay);
 

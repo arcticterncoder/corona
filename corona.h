@@ -24,6 +24,7 @@ struct graphics{
 
 struct game{
 	int running;
+	int pause;
 	struct centuria units[unitlimit];
 	int nextfree;
 
@@ -37,6 +38,7 @@ void cTurn();
 void cSetAngle();
 
 void gameInit();
+void gameClear();
 void gameUpdate();
 void gameEvents();
 
